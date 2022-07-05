@@ -2,9 +2,9 @@
 var dataset = [1, 2, 3, 4, 5];
 
 d3.select('body')
-    .selectAll('p')
+    .selectAll('p') 
     .data(dataset)
     .enter()
-    .append('span') // appends paragraph for each data element
-    .text('D3 is awesome!!');
-    //.text(function(d) { return d; });
+    .append('p') // appends paragraph for each data element
+    // .text('D3 testing');
+    .text(function(d) { return d; }); //uses data as its parameter and returns it
