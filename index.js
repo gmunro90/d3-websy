@@ -1,7 +1,7 @@
 const dataset = [
   {
     id: 'd1',
-    value: 10,
+    value: 8,
     region: 'USA'
   },
   {
@@ -16,14 +16,14 @@ const dataset = [
   },
 ]
 
-const container = d3.select('div')
+const container = d3.select('svg')
   .classed('container', true)
-  .style('border', '1px solid black')
 
   container.selectAll('bar')
     .data(dataset)
     .enter()
-    .append('div')
+    .append('rect')
     .classed('bar', true)
-    .style('width', '50px')
-    .style('height', data => (data.value * 10) + 'px')
+    .attr('width', 50)
+    .attr('height', data => (data.value * 10))
+
